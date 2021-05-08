@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+</head>
+<body>
+    <p style="font-size: 30px; position: relative; top: 50px; left: 50px;">
+        See console >>>>
+    </p>
+
+    <script>
+        function draw(n) {
+            let star = '';
+            let num = 0;
+            for(let column = 1; column <= n; column++) {
+                star = star + num;
+                num = num + 2;
+                star = star + '\n';
+            }
+            return star
+        }
+
+        console.log('n = 2');
+        console.log(draw(2));
+        console.log('n = 3');
+        console.log(draw(3));
+        console.log('n = 4');
+        console.log(draw(4));
+    </script>
+</body>
+</html>

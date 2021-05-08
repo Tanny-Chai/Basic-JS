@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star * Star</title>
+</head>
+<body>
+
+    <p style="font-size: 30px; position: relative; top: 50px; left: 50px;">
+        See console >>>>
+    </p>
+    
+    <script>
+        function draw(n) {
+    let star = ''
+    for(let column = 0; column < n; column++){
+        for(let row = 0; row < n; row++){
+        star = star + '*'
+        }
+        star = star + '\n';
+    }
+    return star;
+    
+    // for(let row = 0; row < n; row++)
+    // console.log(star);
+}
+console.log('1. n = 2')
+    console.log(draw(2))
+    console.log('2. n = 3')
+    console.log(draw(3))
+    console.log('3. n = 4')
+    console.log(draw(4))
+    </script>
+</body>
+</html>
