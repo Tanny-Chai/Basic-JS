@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min3</title>
+</head>
+<body>
+    <p style="font-size: 30px; position: relative; top: 50px; left: 50px;">
+        See console >>>>
+    </p>
+
+    <script>
+        let min1 = Infinity, min2 = Infinity, min3 = Infinity;
+        while(true){
+            let num = prompt(`Input number : _ or Input stop`);
+            if(num == `stop`){
+                break;
+            }
+            else{
+                num = Number(num)
+                if(num <= min1){
+                    min3 = min2;
+                    min2 = min1;
+                    min1 = num;
+                }
+                else if(num >= min1 && num <= min2){
+                    min3 = min2;
+                    min2 = num;
+                }
+                else if(num >= min2 && num <= min3){
+                    min3 = num;
+                }
+            }
+        }
+        alert('minimum 1 = ' + min1);
+        console.log('minimun 1 = ' + min1);
+        alert('minimun 2 = ' + min2);
+        console.log('minimun 2 = ' + min2);
+        alert('minimun 3 = ' + min3);
+        console.log('minimun 3 = ' + min3);
+    </script>
+</body>
+</html>

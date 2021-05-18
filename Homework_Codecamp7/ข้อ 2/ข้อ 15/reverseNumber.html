@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+</head>
+<body>
+
+    <script>
+        let num = prompt('Input Number : ');
+        function reverseNumber(num){
+            return(
+                parseFloat( /*ตัดเลขศูนย์ที่นำหน้าออก สหรับกลับเฟสแล้ว*/
+                    num
+                        .toString() /*แปลง number เป็น string*/
+                        .split('') /*แยก string แต่ละตัวให้เก็บค่าเป็น Array*/
+                        .reverse() /*สลับลำดับภายใน Array เอาหลังขึ้นมา เอาหน้าไปหลัง*/
+                        .join('') /* คืน Array เป็น string เหมือนเดิม */
+                    ) * Math.sign(num) /* คงเครื่องหมายจำนวนเต็มนั้นไว้ เช่น จำนวนบวก และจำนวนเต็มลบ*/
+                )
+        }
+        alert('Input : ' + num);
+        alert('Output : ' + reverseNumber(num));
+    </script>
+</body>
+</html>
